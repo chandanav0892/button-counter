@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Counter</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Counter</h1>
+    <p>Click the respective buttons to increase or decrease the count.</p>
+    <button id="countBtnInc">Count: 0</button>
+    <button id="countBtnDec">Count: 0</button>
+
+    <script>
+        var count = 0;
+        document.getElementById("countBtnInc").addEventListener("click", function() {
+            count++;
+            this.textContent = "Increase Count : " + count;
+        });
+        document.getElementById("countBtnDec").addEventListener("click", function() {
+            count--;
+            this.textContent = "Decrease Count : " + count;
+        })
+    </script>
+</body>
+</html>
